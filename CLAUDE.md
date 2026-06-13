@@ -35,10 +35,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### 规则 3：每次追加必须标注日期
 
-每次追加的知识块使用以下格式：
+每次追加的知识块使用以下格式（日期在标题末尾，右对齐、浅色小字）：
 
 ```markdown
-## YYYY-MM-DD 主题标题
+## 主题标题 <small style="float:right;color:#888">YYYY-MM-DD</small>
 
 精炼的知识内容（要点形式，简洁扼要）
 ```
@@ -67,7 +67,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## 内容格式参考示例
 
 ```markdown
-## 2026-06-13 Git 工作区、暂存区与版本库
+## Git 工作区、暂存区与版本库 <small style="float:right;color:#888">2026-06-13</small>
 
 - **工作区（Working Directory）**：你电脑上能看到的项目文件夹，编辑文件都在这里进行
 - **暂存区（Staging Area / Index）**：`git add` 之后、`git commit` 之前，文件暂存的地方。它是一个"购物车"，你可以选择哪些修改要放进下一次提交
