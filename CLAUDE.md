@@ -14,6 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | `人工智能.md` | 机器学习、深度学习、自然语言处理、计算机视觉、强化学习、模型训练与推理 |
 | `agent开发.md` | AI Agent 架构、工具调用/function calling、多 Agent 协作、RAG、LangChain 等框架 |
 | `数据挖掘.md` | 自动驾驶长尾数据挖掘：EDR 触发、数据闭环、端侧推理（SA8650 NPU）、级联模型、多模态融合、规则伪标注 |
+| `自动驾驶.md` | 车载芯片、传感器、系统架构、功能安全、端侧推理、通信中间件 |
 | `具身智能.md` | 机器人学、感知-行动回路、运动规划、仿真环境、SLAM、强化学习在机器人中的应用 |
 | `乐理.md` | 音乐理论：音阶、和弦、节奏、和声、曲式、记谱法、乐器知识等 |
 
