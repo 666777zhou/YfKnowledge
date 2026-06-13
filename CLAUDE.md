@@ -39,21 +39,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `计算机科学.md` → `## 计算机网络`、`## 数据结构`、`## 操作系统` 等
 - `数据挖掘.md` → `## 车端通信`、`## 仿真数据源`、`## EDR 系统` 等
 
-**B. 条目折叠**：每个知识点用 `<details>` 折叠，`<summary>` 行写标题和日期：
+**B. 二级标题可折叠**：每个 `##` 分类用 `<details>` 包裹内容，`<summary>` 写"展开/折叠"，内部条目用 `###` 三级标题，条目本身不折叠。不加日期。
 
 ```markdown
 ## 计算机网络
 
 <details>
-<summary>TCP 与 HTTP 的关系 `YYYY-MM-DD`</summary>
+<summary>展开/折叠</summary>
+
+### TCP 与 HTTP 的关系
 
 一句话总结：用一句通俗精炼的话概括核心结论。
 
 - 精炼的知识内容（要点形式，简洁扼要）
-</details>
 
-<details>
-<summary>另一个主题 `YYYY-MM-DD`</summary>
+### 另一个主题
 
 一句话总结：...
 
@@ -90,7 +90,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## 版本控制
 
 <details>
-<summary>Git 工作区、暂存区与版本库 `2026-06-13`</summary>
+<summary>展开/折叠</summary>
+
+### Git 工作区、暂存区与版本库
 
 一句话总结：工作区是你编辑的地方，暂存区是购物车，版本库是历史快照——git add 添加购物车，git commit 结算到历史。
 
@@ -98,5 +100,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **暂存区（Staging Area / Index）**：`git add` 之后、`git commit` 之前，文件暂存的地方
 - **版本库（Repository）**：`git commit` 之后，文件被永久保存到 `.git` 目录中
 - 三者关系：工作区 →(`git add`)→ 暂存区 →(`git commit`)→ 版本库
+
 </details>
 ```
