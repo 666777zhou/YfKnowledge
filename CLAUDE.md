@@ -33,17 +33,35 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 用户分享 URL 时，用 `WebFetch` 工具抓取页面内容，将页面中的核心知识提炼后追加到对应文件。
 
-### 规则 3：每次追加必须标注日期
+### 规则 3：追加格式与组织规则
 
-每次追加的知识块使用以下格式（日期用反引号跟在标题后）：
+**A. 主题归类**：同一主题的所有条目归到一个二级标题（`##`）下，按主题领域划分，例如：
+- `计算机科学.md` → `## 计算机网络`、`## 数据结构`、`## 操作系统` 等
+- `数据挖掘.md` → `## 车端通信`、`## 仿真数据源`、`## EDR 系统` 等
+
+**B. 条目折叠**：每个知识点用 `<details>` 折叠，`<summary>` 行写标题和日期：
 
 ```markdown
-## 主题标题 `YYYY-MM-DD`
+## 计算机网络
+
+<details>
+<summary>TCP 与 HTTP 的关系 `YYYY-MM-DD`</summary>
 
 一句话总结：用一句通俗精炼的话概括核心结论。
 
-精炼的知识内容（要点形式，简洁扼要）
+- 精炼的知识内容（要点形式，简洁扼要）
+</details>
+
+<details>
+<summary>另一个主题 `YYYY-MM-DD`</summary>
+
+一句话总结：...
+
+- 要点
+</details>
 ```
+
+**C. 写入前询问**：写入文件前先告知用户，并同时给出两个选项——"写入"还是"补充后再写"。
 
 ### 规则 4：分类判断
 
@@ -69,11 +87,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## 内容格式参考示例
 
 ```markdown
-## Git 工作区、暂存区与版本库 `2026-06-13`
+## 版本控制
+
+<details>
+<summary>Git 工作区、暂存区与版本库 `2026-06-13`</summary>
+
+一句话总结：工作区是你编辑的地方，暂存区是购物车，版本库是历史快照——git add 添加购物车，git commit 结算到历史。
 
 - **工作区（Working Directory）**：你电脑上能看到的项目文件夹，编辑文件都在这里进行
-- **暂存区（Staging Area / Index）**：`git add` 之后、`git commit` 之前，文件暂存的地方。它是一个"购物车"，你可以选择哪些修改要放进下一次提交
-- **版本库（Repository）**：`git commit` 之后，文件被永久保存到 `.git` 目录中，每次提交生成一个快照
+- **暂存区（Staging Area / Index）**：`git add` 之后、`git commit` 之前，文件暂存的地方
+- **版本库（Repository）**：`git commit` 之后，文件被永久保存到 `.git` 目录中
 - 三者关系：工作区 →(`git add`)→ 暂存区 →(`git commit`)→ 版本库
-- 关键推论：`git commit` 只提交暂存区里的内容，不提交工作区里没 add 的修改
+</details>
 ```
