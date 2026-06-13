@@ -51,6 +51,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 追加内容前，先用 `Read` 工具读取目标文件末尾部分（或全文，如果文件不长），确认现有内容和结尾位置，然后用 `Edit` 工具在文件末尾追加新内容。不要使用 `Write` 覆盖整个文件（那会丢失已有知识）。
 
+### 规则 6：Git 操作规范
+
+- **commit**：知识文件有变更时可以主动 commit，不需要每次询问用户
+- **push**：commit 后**必须先询问用户**是否 push 到远程仓库，绝不主动 push
+- 用户可能还没有配置远程仓库，push 前先检查 `git remote -v`
+
 ## 用户特征
 
 - 技术初学者，处于学习阶段
